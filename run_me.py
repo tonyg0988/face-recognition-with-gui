@@ -142,7 +142,7 @@ class MyTableWidget(QWidget):
 
     def Browse(self):
         filename1=self.openFileNameDialog()
-        call(["python","face_recognition.py","./database" ,filename1,str(tolerence)])
+        call(["python","facial_recognition.py","./database" ,filename1,str(tolerence)])
     
     def from_video(self):
         filename2=self.openFileNameDialog()
