@@ -1,0 +1,8 @@
+-Install required modules from setup.py, or one by one from pip
+    ex- sudo pip install module_name.
+    (make sure pip is installed)
+
+Run the main file by running 
+    python run_me.py
+    
+
