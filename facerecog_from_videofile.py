@@ -67,17 +67,6 @@ fourcc = cv2.VideoWriter_fourcc(*'XVID')
 output_movie = cv2.VideoWriter(out_path+'.avi', fourcc, 29.97, (640, 360))
 
 # Load some sample pictures and learn how to recognize them.
-'''lmm_image = face_recognition.load_image_file("lin-manuel-miranda.png")
-lmm_face_encoding = face_recognition.face_encodings(lmm_image)[0]
-
-al_image = face_recognition.load_image_file("alex-lacamoire.png")
-al_face_encoding = face_recognition.face_encodings(al_image)[0]
-'''
-#encodings
-'''known_faces = [
-    lmm_face_encoding,
-    al_face_encoding
-]'''
 
 known_names,known_faces = scan_known_people(known_people_folder)
 

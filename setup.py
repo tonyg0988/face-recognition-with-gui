@@ -27,24 +27,18 @@ test_requirements = [
 
 setup(
     name='face_recognition',
-    version='1.2.3',
+    version='1.147',
     description="Recognize faces from Python or from the command line",
     long_description=readme + '\n\n' + history,
-    author="Adam Geitgey",
-    author_email='ageitgey@gmail.com',
-    url='https://github.com/ageitgey/face_recognition',
+    author="Manish Jangid",
+    author_email='tonyg0988@gmail.com',
+    url='https://github.com/tonyg0988/face-recognition-with-gui',
     packages=[
         'face_recognition',
     ],
     package_dir={'face_recognition': 'face_recognition'},
     package_data={
         'face_recognition': ['models/*.dat']
-    },
-    entry_points={
-        'console_scripts': [
-            'face_recognition=face_recognition.face_recognition_cli:main',
-            'face_detection=face_recognition.face_detection_cli:main'
-        ]
     },
     install_requires=requirements,
     license="MIT license",
@@ -64,6 +58,5 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
     ],
-    test_suite='tests',
-    tests_require=test_requirements
+    
 )

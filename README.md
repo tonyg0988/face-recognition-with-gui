@@ -1,7 +1,12 @@
 # Face Recognition
 
-#Fetched some face_recognition module documentation and its usage.
+#Fetched some face_recognition module documentation and its usage from Other Sources.
+#From these Documentation you can get an idea how face_recognition library works.
+
+
 #Read usage.txt for my Program related usage.
+
+
 
 _You can also read a translated version of this file [in Chinese 简体中文版](https://github.com/ageitgey/face_recognition/blob/master/README_Simplified_Chinese.md) or [in Korean 한국어](https://github.com/ageitgey/face_recognition/blob/master/README_Korean.md)._
 
