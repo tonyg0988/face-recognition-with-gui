@@ -1,10 +1,10 @@
 # Face Recognition
 
-#Fetched some face_recognition module documentation and its usage from Other Sources.
-#From these Documentation you can get an idea how face_recognition library works.
+# Fetched some face_recognition module documentation that is used in the Project and its usage from Other Sources(user ageitgey on Github).
+# From these Documentation you can get an idea how face_recognition library works.
 
 
-#Read usage.txt for my Program related usage.
+# Read usage.txt for my Program related usage.
 
 
 
