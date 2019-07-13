@@ -131,6 +131,7 @@ while True:
         font = cv2.FONT_HERSHEY_DUPLEX
         cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
         cv2.putText(frame,'Brightness/Visiblity: '+condition,(80,30), font,1,(255,255,255),1,cv2.LINE_AA)
+        cv2.putText(frame,'Press Q to Quit',(5,470), font,0.5,(255,255,255),1,cv2.LINE_AA)
 
     # Display the resulting image
     cv2.imshow('Video', frame)
