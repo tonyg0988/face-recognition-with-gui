@@ -3,6 +3,7 @@ import cv2
 import numpy as np
 import os
 import re
+from itertools import chain
 
 
 known_people_folder='./database'
@@ -54,7 +55,32 @@ process_this_frame = True
 while True:
     # Grab a single frame of video
     ret, frame = video_capture.read()
+    #Converting the imgage to HLS for brightness(Light intersity) Detection
+    imgHLS = cv2.cvtColor(frame, cv2.COLOR_BGR2HLS)
+    Lchannel = imgHLS[:,:,1]
+    
+    a=list(chain.from_iterable(Lchannel))
+    brightness=sum(a)/len(a)
+    if(brightness<=75):
+        condition="Very Poor"
+    if(brightness<=85 and brightness >75):
+        condition=" Poor"
+    if(brightness<=95 and brightness >85):
+        condition="Good"
+    
+    if(brightness <=105 and brightness >95):
+        condition="Very Poor"
+    if(brightness >105):
+        condition="Excellent"
 
+    print(condition)
+    #print(brightness)
+
+
+
+    #np.array(Lchannel).tolist()
+    #print(type(Lchannel))
+   
     # Resize frame of video to 1/4 size for faster face recognition processing
     small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
 
@@ -104,6 +130,7 @@ while True:
         cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (0, 0, 255), cv2.FILLED)
         font = cv2.FONT_HERSHEY_DUPLEX
         cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
+        cv2.putText(frame,'Brightness/Visiblity: '+condition,(80,30), font,1,(255,255,255),1,cv2.LINE_AA)
 
     # Display the resulting image
     cv2.imshow('Video', frame)
